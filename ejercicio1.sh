@@ -10,6 +10,7 @@ sum=0
 [ $# -eq 0 ] && echo "No hay argumentos" && exit 1
 
 for palabra in $@; do
+	[[ "${palabra}" =~ [^a-zA-Z] ]] && continue
 	largo=`echo $palabra | awk '{print length}'`
 	if [ $cont -eq 0 ]; then
 		maxpal=($palabra)
@@ -33,5 +34,7 @@ for palabra in $@; do
 	cont=$((cont+1))
 	done
 promedio=$((sum/cont))
-echo "La palabra mas larga es $maxpal, la mas corta $minpal y el promedio es $promedio"
+echo "La palabra mas larga es $maxpal y tiene $largomax caracteres" 
+echo "La palabra mas corta es $minpal y tiene $largomin caracteres"
+echo "la longitud promedio es $promedio"
 exit 0

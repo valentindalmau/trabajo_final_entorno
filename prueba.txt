@@ -1,0 +1,5 @@
+Este es un texto de prueba para los scripts. Va a tener 3 lineas en blanco y 5 oraciones.
+
+Para estar seguro de que anda algunas algunas palabras van a ser repetidas repetidas repetidas repetidas. La ultima termino en punto, si tienen un caracter que no es una letra no son consideradas.
+
+Gracias por probar el menu.
